@@ -110,12 +110,12 @@ function akaiv_post_meta() {
 
 /* 글: 편집 링크 */
 function akaiv_edit_post_link() {
-  if ( is_single() ) :
-    edit_post_link( '편집', '<span class="edit-link"><i class="fa fa-fw fa-pencil"></i> ', '</span>' );
-  else : ?>
-    <div class="text-right"><?php
-      edit_post_link( '편집', '<span class="edit-link">', '</span>' ); ?>
+  if ( is_page() ) : ?>
+    <div class="text-right">
+      <?php edit_post_link( '편집', '<span class="edit-link">', '</span>' ); ?>
     </div><?php
+  else :
+    edit_post_link( '편집', '<span class="edit-link"><i class="fa fa-fw fa-pencil"></i> ', '</span>' );
   endif;
 }
 
