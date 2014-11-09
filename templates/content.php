@@ -28,11 +28,11 @@
     <div class="col-xs-9 col-sm-10">
       <header class="entry-header">
         <h1 class="entry-title">
-          <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php akaiv_the_title(); ?></a>
+          <a href="<?php akaiv_the_url(); ?>" target="_blank" rel="bookmark"><?php akaiv_the_title(); ?></a>
         </h1>
       </header>
       <div class="entry-summary">
-        <a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
+        <a href="<?php akaiv_the_url(); ?>"><?php the_excerpt(); ?></a>
       </div>
     </div><!-- column: 제목과 요약 -->
   </div><!-- .row -->

@@ -72,13 +72,14 @@ function akaiv_the_title() {
   echo $title;
 }
 
+/* 글: URL */
+function akaiv_the_url() {
+  $url = get_post_meta( get_the_ID(), 'wpcf-url', true );
+  echo esc_url( $url );
+}
+
 /* 글: 썸네일 */
 function akaiv_post_thumbnail() {
-  if ( post_password_required() ) : /* 비밀번호가 필요한 경우 */ ?>
-    <a class="post-thumbnail" href="<?php the_permalink(); ?>"><img width="150" height="150" src="<?php echo get_template_directory_uri(); ?>/images/thumbnail-lock.png" class="attachment-thumbnail wp-post-image" alt="<?php echo get_the_title(); ?>"></a><?php
-    return;
-  endif;
-
   if ( is_singular() ) : /* 포스트, 페이지, 첨부파일의 경우 */
     if ( has_post_thumbnail() ) : ?>
       <div class="post-thumbnail">
@@ -87,7 +88,7 @@ function akaiv_post_thumbnail() {
     endif;
 
   else : /* 외부: a.post-thumbnail에 링크 부여하고 썸네일을 가져옴 */ ?>
-    <a class="post-thumbnail" href="<?php the_permalink(); ?>"><?php
+    <a class="post-thumbnail" href="<?php akaiv_the_url(); ?>"><?php
       if ( has_post_thumbnail() ) :
         the_post_thumbnail('thumbnail');
       else : ?>
