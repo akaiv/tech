@@ -46,7 +46,7 @@ function akaiv_page_header($str = null) { ?>
         elseif ( is_month()    ) : echo get_the_date( 'Y년 F' );
         elseif ( is_year()     ) : echo get_the_date( 'Y년' );
         elseif ( is_author()   ) : the_post(); echo get_the_author().'의 모든 글'; rewind_posts();
-        elseif ( is_tag()      ) : single_tag_title();
+        elseif ( is_tag()      ) : single_tag_title('태그: ');
         elseif ( is_category() ) : single_cat_title();
         else                     : echo '보관함';
         endif;
