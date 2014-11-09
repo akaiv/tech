@@ -1,4 +1,4 @@
-  <?php if ( !is_front_page() ) echo '</div><!-- .container -->'; ?>
+  </div><!-- .container -->
 </div><!-- #main -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
