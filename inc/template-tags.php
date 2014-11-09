@@ -57,6 +57,9 @@ function akaiv_page_header($str = null) { ?>
           <small class="taxonomy-description"><?php echo $term_description; ?></small><?php
         endif;
 
+      elseif( is_home() ) :
+        echo '최근 글 목록';
+
       else :
         echo get_the_title();
 
