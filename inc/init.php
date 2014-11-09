@@ -16,6 +16,7 @@ add_action( 'after_setup_theme', 'akaiv_setup_theme' );
 
 /* 관리자: 포스트에서 일부 기능 제거 */
 function akaiv_init() {
+  remove_post_type_support( 'post', 'editor' );
   remove_post_type_support( 'post', 'author' );
   remove_post_type_support( 'post', 'trackbacks' );
   remove_post_type_support( 'post', 'comments' );
