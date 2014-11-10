@@ -33,6 +33,7 @@
       <label class="sr-only" for="inputExcerpt">요약</label>
       <textarea class="form-control input-sm" name="post[excerpt]" id="inputExcerpt" placeholder="요약" rows="2"></textarea>
     </div>
+    <?php wp_nonce_field( 'add-post_'.get_current_user_id(), '_wpnonce' ); ?>
     <?php if ( ! empty( $error ) ) echo '<p class="help-block"><i class="fa fa-fw fa-warning"></i> 오류</p>'; ?>
     <button type="submit" class="btn btn-primary btn-block">제출</button>
   </form>

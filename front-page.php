@@ -4,13 +4,15 @@ get_header();
 akaiv_before_content(); ?>
 
 <?php
+  /* 관리자: 새 항목 추가 폼 */
   if ( current_user_can( 'publish_posts' ) ) :
-    get_template_part( 'templates/form', 'add-post' );
+    require_once 'templates/form-add-post.php';
   endif;
-  get_template_part( 'templates/front' );
-?>
 
-<?php
+  /* 첫 화면 내용 */
+  get_template_part( 'templates/front' );
+
+  /* 최근 글 목록 */
   if ( have_posts() ) :
     akaiv_page_header();
     while ( have_posts() ) : the_post();

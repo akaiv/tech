@@ -1,7 +1,9 @@
 <?php
 /* 전달받은 폼을 새 포스트에 추가 */
 if ( 'POST' === $_SERVER['REQUEST_METHOD'] ) :
-  if ( add_post( $_POST['post'] ) ) :
+  if ( ! wp_verify_nonce( $_POST['_wpnonce'], 'add-post_'.get_current_user_id() ) ) :
+    die( 'Security check' );
+  elseif ( add_post( $_POST['post'] ) ) :
     wp_redirect( home_url() );
     die();
   else :
