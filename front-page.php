@@ -1,8 +1,14 @@
 <?php
+require_once 'inc/add-post.php';
 get_header();
 akaiv_before_content(); ?>
 
-<?php get_template_part( 'templates/front' ); ?>
+<?php
+  if ( current_user_can( 'publish_posts' ) ) :
+    get_template_part( 'templates/form', 'add-post' );
+  endif;
+  get_template_part( 'templates/front' );
+?>
 
 <?php
   if ( have_posts() ) :
