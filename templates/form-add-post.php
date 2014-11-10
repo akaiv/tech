@@ -6,7 +6,7 @@
         <label class="sr-only" for="selectCategory">카테고리</label>
         <select class="form-control input-sm" name="post[category_id]" id="selectCategory" required>
           <option value="">카테고리</option>
-          <?php foreach( get_terms( 'category' ) as $category ) : ?>
+          <?php foreach( get_terms( 'category', array( 'order' => 'DESC' ) ) as $category ) : ?>
             <option value="<?php echo $category->term_id; ?>"><?php echo $category->name; ?></option>
           <?php endforeach; ?>
         </select>

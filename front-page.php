@@ -11,17 +11,6 @@ akaiv_before_content(); ?>
 
   /* 첫 화면 내용 */
   get_template_part( 'templates/front' );
-
-  /* 최근 글 목록 */
-  if ( have_posts() ) :
-    akaiv_page_header();
-    while ( have_posts() ) : the_post();
-      get_template_part( 'templates/content' );
-    endwhile;
-    akaiv_paginate_links();
-  else :
-    get_template_part( 'templates/content', 'none' );
-  endif;
 ?>
 
 <?php

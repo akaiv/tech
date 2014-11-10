@@ -18,7 +18,7 @@
 <a class="sr-only skip-link" href="#content"><?php echo 'Skip to content'; ?></a>
 
 <header id="masthead" class="site-header" role="banner">
-  <?php $args = array( 'title_li' => '', 'depth' => 1 ); ?>
+  <?php $args = array( 'title_li' => '', 'depth' => 1, 'order' => 'DESC' ); ?>
   <nav id="gnb" class="site-navigation gnb gnb-mobile navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -38,7 +38,6 @@
     <div class="container">
       <h1 id="brand" class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
       <?php if ( get_bloginfo( 'description' ) ) : ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
-      <p class="site-about"><a href="<?php echo home_url( '/about' ) ?>" class="btn btn-default btn-sm">about</a></p>
       <ul class="cat-list list-inline hidden-xs"><?php wp_list_categories( $args ); ?></ul>
     </div>
   </nav>
