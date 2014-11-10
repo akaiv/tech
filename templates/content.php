@@ -22,10 +22,10 @@
 <?php else : /* 목록 */ ?>
 
   <div class="row">
-    <div class="col-xs-3 col-sm-2">
+    <div class="hidden-xs col-sm-2">
       <?php akaiv_post_thumbnail(); ?>
     </div><!-- column: 썸네일 -->
-    <div class="col-xs-9 col-sm-10">
+    <div class="col-xs-12 col-sm-10">
       <header class="entry-header">
         <h1 class="entry-title">
           <a href="<?php akaiv_the_url(); ?>" target="_blank" rel="bookmark"><?php akaiv_the_title(); ?></a>
