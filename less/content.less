@@ -3,23 +3,110 @@
 	.img-circle;
 }
 
-// 글: 제목
+// 배치
+@circle: 50px;
+@circle-lg: 75px;
+.term-link-wrapper,
+.entry-wrapper {
+	float: left;
+}
+.term-link-wrapper {
+	width: @circle;
+	@media (min-width: @phone) {
+		width: @circle-lg;
+	}
+}
+.entry-wrapper {
+	margin-left: (@grid-gutter-width / 2);
+	width: (@iphone - (1.5 * @grid-gutter-width) - @circle);
+	@media (min-width: @phone) {
+		margin-left: @grid-gutter-width;
+		width: (@phone - (2 * @grid-gutter-width) - @circle-lg);
+	}
+	@media (min-width: @grid-float-breakpoint) {
+		width: (@container-tablet - (2 * @grid-gutter-width) - @circle-lg);
+	}
+}
+
+// 글 항목: 카테고리 혹은 태그
+.term-link {
+	.11px;
+	background-color: @gray-95;
+	border-radius: 50%;
+	color: @gray-66;
+	display: inline-block;
+	font-weight: bold;
+	letter-spacing: -.05em;
+	line-height: @circle;
+	.square(@circle);
+	@media (min-width: @phone) {
+		.14px;
+		line-height: @circle-lg;
+		.square(@circle-lg);
+	}
+	overflow: hidden;
+	text-align: center;
+	text-transform: uppercase;
+	.transition(all 150ms ease);
+	white-space: nowrap;
+	&:hover,
+	&:focus {
+		background-color: @gray-90;
+		color: @gray-33;
+	}
+}
+
+// 글 항목: 제목
 .entry-title {
 	.font-size(18);
 	@media (min-width: @tablet) {
 		.font-size(22);
 	}
 	a { .link(@text) }
+	margin-top: 10px;
+	margin-bottom: 5px;
+	@media (min-width: @phone) {
+		font-size: 20px;
+		margin-top: 15px;
+	}
+	a {
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+.has-excerpt .entry-title {
+	margin-top: 5px;
+	@media (min-width: @phone) {
+		margin-top: 5px;
+	}
 }
 
-// 글: 메타
+// 글 항목: 요약과 메타
+.entry-summary,
 .entry-meta {
 	.12px;
+	@media (min-width: @phone) {
+		.14px;
+	}
 	color: @text-light;
-	a { .link(@text-light) }
+	a {
+		color: @text-light;
+		&:hover,
+		&:focus {
+			color: darken(@text-light, 10%);
+			text-decoration: underline;
+		}
+	}
 	> span {
 		@media (min-width: @phone) {
 			margin-right: 10px;
 		}
 	}
+	.fa-tag     { color: lighten(@text-light, 30%); }
+	.fa-clock-o { color: lighten(@text-light, 15%); }
+}
+.entry-summary {
+	margin-bottom: 3px;
 }
