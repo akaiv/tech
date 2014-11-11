@@ -19,7 +19,7 @@
 
 <header id="masthead" class="site-header" role="banner">
   <?php $args = array( 'title_li' => '', 'depth' => 1 ); ?>
-  <nav id="gnb" class="site-navigation gnb navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
+  <nav id="gnb" class="site-navigation gnb gnb-mobile navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnb-collapse">
@@ -37,7 +37,7 @@
   <nav class="site-navigation gnb gnb-desktop text-center" role="navigation">
     <div class="container">
       <h1 id="brand" class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-      <?php if ( bloginfo( 'description' ) ) : ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
+      <?php if ( get_bloginfo( 'description' ) ) : ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
       <p class="site-about"><a href="<?php echo home_url( '/about' ) ?>" class="btn btn-default btn-sm">about</a></p>
       <ul class="cat-list list-inline hidden-xs"><?php wp_list_categories( $args ); ?></ul>
     </div>
