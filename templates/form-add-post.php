@@ -15,7 +15,7 @@
         <label class="sr-only" for="selectTag">태그</label>
         <select class="form-control input-sm" name="post[tags_input]" id="selectTag" required>
           <option value="">태그</option>
-          <?php foreach( get_terms('post_tag') as $tag ) : ?>
+          <?php foreach( get_terms( 'post_tag' ) as $tag ) : ?>
             <option value="<?php echo $tag->name; ?>"><?php echo $tag->name; ?></option>
           <?php endforeach; ?>
         </select>

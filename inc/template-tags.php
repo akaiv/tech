@@ -46,7 +46,7 @@ function akaiv_page_header($str = null) { ?>
         elseif ( is_month()    ) : echo get_the_date( 'Y년 F' );
         elseif ( is_year()     ) : echo get_the_date( 'Y년' );
         elseif ( is_author()   ) : the_post(); echo get_the_author().'의 모든 글'; rewind_posts();
-        elseif ( is_tag()      ) : single_tag_title('태그: ');
+        elseif ( is_tag()      ) : single_tag_title( '태그: ' );
         elseif ( is_category() ) : single_cat_title();
         else                     : echo '보관함';
         endif;
@@ -119,7 +119,7 @@ function akaiv_post_meta($str = null) {
     endif;
 
   elseif ( $str == 'date' ) : ?>
-    <span class="posted-on"><i class="fa fa-fw fa-clock-o"></i> <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ) ?></time></a></span><?php
+    <span class="posted-on"><i class="fa fa-fw fa-clock-o"></i> <a href="<?php echo get_month_link( get_the_time('Y'), get_the_time('m') ); ?>"><time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ) ?></time></a></span><?php
 
   elseif ( $str == 'author' ) : ?>
     <span class="byline author vcard"><i class="fa fa-fw fa-user"></i> <a class="url fn" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php echo get_the_author(); ?></a></span><?php
