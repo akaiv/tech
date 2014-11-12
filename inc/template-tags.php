@@ -78,6 +78,7 @@ function akaiv_the_title() {
 /* 글: URL */
 function akaiv_get_url() {
   $url = get_post_meta( get_the_ID(), 'wpcf-url', true );
+  if ( ! $url ) $url = '#';
   return esc_url( $url );
 }
 function akaiv_the_url() {
