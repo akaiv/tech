@@ -108,7 +108,7 @@ function akaiv_post_thumbnail() {
 /* 글: 메타 */
 function akaiv_post_meta($str = null) {
   if ( ! $str ) :
-    return false;
+    return;
 
   elseif ( $str == 'category' ) : ?>
     <span class="cat-links"><i class="fa fa-fw fa-folder-open"></i> <?php echo get_the_category_list( ', ' ); ?></span><?php
@@ -129,12 +129,10 @@ function akaiv_post_meta($str = null) {
 
 /* 글: 편집 링크 */
 function akaiv_edit_post_link() {
-  if ( is_page() ) : ?>
-    <div class="text-right">
-      <?php edit_post_link( '편집', '<span class="edit-link">', '</span>' ); ?>
-    </div><?php
-  else :
+  if ( ! is_page() ) :
     edit_post_link( '편집', '<span class="edit-link"><i class="fa fa-fw fa-pencil"></i> ', '</span>' );
+  else :
+    edit_post_link( '편집', '<div class="text-right"><span class="edit-link">', '</span></div>' );
   endif;
 }
 
