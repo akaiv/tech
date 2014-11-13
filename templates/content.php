@@ -11,13 +11,13 @@
       </h1>
     </header>
     <div class="entry-summary">
-      <a href="<?php akaiv_the_url(); ?>"><?php the_excerpt(); ?></a>
+      <p><?php the_excerpt(); ?></p>
     </div>
     <div class="entry-meta">
       <?php akaiv_post_meta( 'category' ); ?>
       <?php akaiv_post_meta( 'tag' ); ?>
       <?php akaiv_post_meta( 'date' ); ?>
-      <?php akaiv_edit_post_link();  ?>
+      <?php akaiv_edit_post_link(); ?>
     </div>
   </div><!-- column: 제목과 요약 -->
 </div><!-- .row -->
