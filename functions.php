@@ -1,4 +1,5 @@
 <?php
+require_once 'inc/article.php';
 require_once 'inc/class.php';
 require_once 'inc/enqueue.php';
 require_once 'inc/init.php';
