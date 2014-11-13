@@ -11,7 +11,7 @@
       </h1>
     </header>
     <div class="entry-summary">
-      <a href="<?php akaiv_the_url(); ?>"><?php the_excerpt(); ?></a>
+      <?php the_excerpt(); ?>
     </div>
     <div class="entry-meta">
       <?php akaiv_post_meta( 'category' ); ?>
