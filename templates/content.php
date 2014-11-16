@@ -15,7 +15,7 @@
     </div>
     <div class="entry-meta">
       <?php akaiv_post_meta( 'category' ); ?>
-      <?php akaiv_post_meta( 'tag' ); ?>
+      <?php if ( has_tag() ) akaiv_post_meta( 'tag' ); ?>
       <?php akaiv_post_meta( 'date' ); ?>
       <?php akaiv_edit_post_link(); ?>
     </div>
