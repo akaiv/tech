@@ -1,4 +1,4 @@
-<?php akaiv_before_page(); ?>
+<?php akaiv_before_post(); ?>
 
 <div class="row">
   <div class="hidden-xs col-sm-2">
@@ -22,4 +22,4 @@
   </div><!-- column: 제목과 요약 -->
 </div><!-- .row -->
 
-<?php akaiv_after_page(); ?>
+<?php akaiv_after_post(); ?>
