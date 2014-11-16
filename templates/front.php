@@ -7,13 +7,13 @@
   ) )[0];
 
   if( $about ) :
-    akaiv_before_page();
+    akaiv_before_post();
     akaiv_page_header( $about->post_title ); ?>
     <div class="page-content">
       <?php echo wpautop( $about->post_content ); ?>
     </div><?php
     akaiv_edit_post_link();
-    akaiv_after_page();
+    akaiv_after_post();
 
   else : ?>
     <div class="page-content">
