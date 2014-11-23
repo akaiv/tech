@@ -1,7 +1,7 @@
 <?php
 /* 테마 설정 */
 function akaiv_setup_theme() {
-  register_nav_menu( 'gnb', '주 메뉴' );
+  // register_nav_menu( 'gnb', '주 메뉴' );
   // add_image_size( $name-1x, $width, $height, $crop );
   // add_image_size( $name-2x, $width, $height, $crop );
   add_theme_support( 'post-thumbnails' );
