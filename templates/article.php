@@ -38,7 +38,7 @@
       $entry_year  = get_the_time('Y');
       $entry_month = get_the_time('m'); ?>
       &mdash; <a href="<?php echo get_month_link( $entry_year, $entry_month ); ?>" data-toggle="tooltip" data-placement="right" title="<?php echo $entry_year.'년 '.$entry_month.'월'; ?>에 추가된 항목 보기"><time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ) ?></time></a>
-      <?php akaiv_edit_post_link(); ?>
+      <?php akaiv_edit_post_link( false, '&#124;' ); ?>
     </div>
   </div>
 </article>

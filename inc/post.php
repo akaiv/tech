@@ -111,7 +111,7 @@ function akaiv_post_meta($meta = null, $icon = '') {
 /* 편집 링크 */
 function akaiv_edit_post_link($right = false, $icon = '') {
   if ( ! empty($icon) )
-    $icon = '<i class="fa fa-fw '.$icon.'"></i> ';
+    $icon = $icon.' ';
   $before = '<span class="edit-link">'.$icon;
   $after = '</span>';
   if ( $right ) :
