@@ -12,7 +12,7 @@
     <div class="page-content">
       <?php echo wpautop( $about->post_content ); ?>
     </div><?php
-    akaiv_edit_post_link();
+    akaiv_edit_post_link( true );
     akaiv_after_post();
 
   else : ?>
