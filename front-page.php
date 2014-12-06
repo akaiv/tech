@@ -10,7 +10,7 @@ akaiv_before_content(); ?>
   endif;
 
   /* 첫 화면 내용 */
-  get_template_part( 'templates/front' );
+  get_template_part( 'templates/content', 'front' );
 ?>
 
 <?php

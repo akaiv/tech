@@ -1,0 +1,79 @@
+// 헤더
+@header-bg: @brand;
+.site-header {
+	background-color: @header-bg;
+	margin-bottom: 10px;
+	min-height: @navbar-height;
+	position: relative;
+	a {
+		.link(@navbar-inverse-link-color;@white);
+	}
+	.gnb {
+		position: absolute;
+	}
+	.gnb-desktop {
+		position: relative;
+	}
+	.navbar-collapse {
+		background-color: @header-bg;
+	}
+	.navbar-toggle:focus .icon-bar {
+		background-color: @navbar-inverse-link-color;
+	}
+	.navbar-toggle:hover .icon-bar {
+		background-color: @white;
+	}
+	.site-title {
+		//== 모양과 여백
+		font-weight:    @normal;
+		font-size:      16px;
+		line-height:    20px;
+		margin-top:    ((@navbar-height - 20px) / 2);
+		margin-bottom: ((@navbar-height - 20px) / 2);
+
+		@media (max-width: @grid-float-breakpoint) {
+			//== 위치
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+		width: auto;
+		z-index: (@zindex-navbar-fixed + 1);
+
+		//== 데스크톱
+		@media (min-width: @grid-float-breakpoint) {
+			font-size: 20px;
+			margin-top:    20px;
+			margin-bottom: 10px;
+		}
+	}
+	.cat-list {
+		margin-bottom: 0;
+	}
+	.cat-item {
+		padding: 0;
+		> a {
+			.14px;
+			display: block;
+			padding: 10px 8px;
+		}
+		&.current-cat > a {
+			position: relative;
+			@media (min-width: @grid-float-breakpoint) {
+				&:after {
+					content: "";
+					display: block;
+					border: 5px solid @white;
+					border-top-color: transparent;
+					border-left-color: transparent;
+					border-right-color: transparent;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin-left: -5px;
+				}
+			}
+		}
+	}
+}
