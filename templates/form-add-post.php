@@ -1,4 +1,4 @@
-<div class="add-post">
+<section class="add-post">
   <h1>새 항목 추가</h1>
   <form action method="POST" role="form">
     <div class="form-inline">
@@ -20,7 +20,7 @@
           <?php endforeach; ?>
         </select>
       </div>
-    </div><!-- .form-inline -->
+    </div>
     <div class="form-group">
       <label class="sr-only" for="inputTitle">제목</label>
       <input type="text" class="form-control input-sm" name="post[title]" id="inputTitle" placeholder="제목" required>
@@ -37,4 +37,4 @@
     <?php if ( ! empty( $error ) ) echo '<p class="help-block"><i class="fa fa-fw fa-warning"></i> 오류</p>'; ?>
     <button type="submit" class="btn btn-primary btn-block">제출</button>
   </form>
-</div>
+</section>

@@ -1,7 +1,5 @@
-( function( $ ) {
+(function ($) {
   'use strict';
 
-  $('[data-toggle="tooltip"]').tooltip({
-    delay: { "show": 500 }
-  });
-} )( jQuery );
+  $('[data-toggle="tooltip"]').tooltip();
+})(jQuery);

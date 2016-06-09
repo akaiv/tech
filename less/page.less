@@ -1,24 +1,18 @@
-.page {
-	// 글: 썸네일
-	.post-thumbnail {
-		margin-bottom: (1.5 * 10px);
-		@media (min-width: @phone) {
-			margin-bottom: 10px;
-		}
-		.wp-post-image {
-			width: 100%;
+// 페이지 헤더
+.page-header {
+	margin-top: 10px;
+	> h1 {
+		.normal;
+		.font-size(28);
+		margin-bottom: 5px;
+		@media (min-width: @tablet) {
+			.font-size(36);
 		}
 	}
 }
 
-// 글: 내용
+// 페이지 내용
 .page-content {
-	h1, h2, h3 { margin: 25px 0 10px }
-	p, ul, ol { margin-bottom: 10px }
-	a:hover {
-		.underline;
-		&.btn { text-decoration: none }
-	}
-	.font-size(16);
-	line-height: 1.6;
+	.16px;
+	line-height: 1.75;
 }
