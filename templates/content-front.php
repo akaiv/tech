@@ -21,3 +21,5 @@ else : ?>
   </section><?php
 
 endif;
+
+get_template_part( 'templates/archive', 'monthly' );

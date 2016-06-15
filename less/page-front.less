@@ -1,0 +1,22 @@
+// 월별 글 목록
+.list-monthly {
+	.list-unstyled();
+
+	.item { padding: 2px 0 }
+
+	.item a,
+	.item-link { display: inline-block }
+}
+
+// 인디케이터
+.item-indicator {
+	.size(16px; 28px);
+	background-color: @link;
+	border-right: 1px solid tint(@link, 20%);
+	border-right: 1px solid fade(@white, 20%);
+	display: inline-block;
+	vertical-align: bottom;
+
+	.item:hover &,
+	.item:focus & { background-color: shade(@link, 60%) }
+}
