@@ -1,0 +1,3 @@
+{
+  "extends": "../assets/bootstrap/js/.jshintrc"
+}

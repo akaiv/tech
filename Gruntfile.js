@@ -29,16 +29,16 @@ module.exports = function (grunt) {
     },
 
     jshint: {
-      options: { jshintrc: 'assets/bootstrap/js/.jshintrc' },
+      options: { jshintrc: 'js/.jshintrc' },
       grunt: {
-        options: { jshintrc: 'assets/bootstrap/grunt/.jshintrc' },
+        options: { jshintrc: '.jshintrc' },
         src: 'Gruntfile.js'
       },
       core: { src: 'js/*.js' }
     },
 
     jscs: {
-      options: { config: 'assets/bootstrap/js/.jscsrc' },
+      options: { config: 'js/.jscsrc' },
       grunt: {
         options: { requireCamelCaseOrUpperCaseIdentifiers: false },
         src: '<%= jshint.grunt.src %>'
