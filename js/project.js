@@ -37,9 +37,7 @@
     element
       .wrapInner('<section class="item-link"></section>')
       .data('postCount', postCount)
-    for (var i = postCount - 1; i >= 0; i--) {
-      element.append($indicator)
-    }
+    element.append($indicator.repeat(postCount))
     var itemLinkWidth = element.find('.item-link').outerWidth()
     itemLinkMaxWidth = Math.max(itemLinkMaxWidth, itemLinkWidth)
   }
