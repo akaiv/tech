@@ -18,7 +18,7 @@
     <h1 class="entry-title">
       <a href="<?php akaiv_the_url(); ?>" target="_blank" rel="bookmark"><?php akaiv_the_title(); ?></a>
     </h1>
-    <?php if ( $excerpt != '' ) echo '<p class="entry-summary">'.$excerpt.'</p>'; ?>
+    <?php if ( $excerpt != '' ) echo '<p class="entry-summary">'.esc_html($excerpt).'</p>'; ?>
     <div class="entry-meta"><?php
       /* 태그 */
       if ( ! ( is_category() || is_tag() ) ) :
